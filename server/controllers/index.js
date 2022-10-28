@@ -164,11 +164,11 @@ const setDogName = async (req, res) => {
 
   try {
     await newDog.save();
-    latestEdition = newDog;
+    latestAdded = newDog;
     return res.json({
-      name: latestEdition.name,
-      breed: latestEdition.breed,
-      age: latestEdition.age,
+      name: latestAdded.name,
+      breed: latestAdded.breed,
+      age: latestAdded.age,
     });
   } catch (err) {
     console.log(err);
